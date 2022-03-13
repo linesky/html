@@ -3,18 +3,54 @@
 		<title>
 body sample code
 		</title>
+		<style>
+			#hello{
+				height:350px;
+				width:600px;
+			}
+			.world{
+				position:relative;
+				height:50px;
+				width:150px;
+			}
+		</style>
 	</head>
 	<body bgColor='gray'>
-		<h1>
-				<p id="p1">
-HELLO WORLD...
-				</p>
-		</h1>
+		<div id="hello" bgColor="darkgray" >
+			<div id='hworld' class='world' bgColor="lightgray" top="0" left="0">
+HELLO WORLDS...
+			</div>
+		</div>
 		<script>
+var y=0;
+var x=0;
+var xx=10;
+var yy=10;
+var xx1=10;
+var xx2=-10;
+var yy1=10;
+var yy2=-10;
 setInterval(t1,1000);
 function t1(){
-	const dates=new Date();
-	document.getElementById("p1").innerHTML=dates.toLocaleTimeString();
+	var hworld=document.getElementById("hworld");
+	hworld.style.top=y.toString()+"px";
+	hworld.style.left=x.toString()+"px";
+	x=x+xx;
+	y=y+yy;
+	if (x>570){
+		xx=xx2
+	}
+	if (x<0){
+		xx=xx1
+	}
+
+	if (y>320){
+		yy=yy2;
+	}
+	if (y<0){
+		yy=yy1;
+	}
+
 }
 		</script>
 	</body>
