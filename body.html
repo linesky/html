@@ -6,7 +6,16 @@ body sample code
 	</head>
 	<body bgColor='gray'>
 		<h1>
+				<p id="p1">
 HELLO WORLD...
+				</p>
 		</h1>
+		<script>
+setInterval(t1,1000);
+function t1(){
+	const dates=new Date();
+	document.getElementById("p1").innerHTML=dates.toLocaleTimeString();
+}
+		</script>
 	</body>
 </html>
