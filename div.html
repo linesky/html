@@ -4,22 +4,47 @@
 div sample code
 		</title>
 		<style>
-			#hello{
+			#menus{
 				height:200px;
 				width:200px;
-			}
-			.world{
-				position:relative;
-				top:100px;
-				left:100px;
 			}
 		</style>
 	</head>
 	<body bgColor='gray'>
-		<div id="hello" bgColor="darkgray" >
-			<div class="world" bgColor="lightgray" >
-HELLO WORLD...
+		<div id="menus" bgColor="#444444" >
+			<div class="menu1" bgColor="#bbbbbb" onclick="m1();">
+menu 1
+			</div>
+			<div class="menu2" bgColor="#bbbbbb" onclick="m2();">
+menu 2
+			</div>
+			<div class="menu3" bgColor="#bbbbbb" onclick="m3();">
+menu 3
+			</div>
+			<div class="menu4" bgColor="#bbbbbb" onclick="m4();">
+menu 4
+			</div>
+			<div class="menu5" bgColor="#bbbbbb" onclick="m5();">
+menu 5
 			</div>
 		</div>
+		<script>
+function m1(){
+	alert("menu1");
+}
+function m2(){
+	alert("menu2");
+}
+function m3(){
+	alert("menu3");
+}
+function m4(){
+	alert("menu4");
+}
+function m5(){
+	alert("menu5");
+}
+
+	</script>
 	</body>
 </html>
