@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>
+			min
+		</title>
+		
+	</head>
+	<body bgColor='green'>
+		<div id="txt" bgColor="green" >
+			
+		</div>
+		<script>
+function min(a,b){
+	d=a;
+	if(b<a)d=b;
+	return d;
+	
+}
+var txts=document.getElementById("txt");
+x=0;
+txts.innerHTML="";
+for(c=0;c<20;c++){
+	x=min(c,10);
+	txts.innerHTML+=x.toString()+"<br>";
+	}
+
+
+	</script>
+	</body>
+</html>
