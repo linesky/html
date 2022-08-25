@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>
+add
+		</title>
+		
+	</head>
+	<body bgColor='green'>
+		<div id="txt" bgColor="green" >
+	
+		</div>
+		<script>
+
+function eeppromX(a){ 
+  
+  ii=0;
+  
+  l=0;
+  i="hello world...\n";
+  
+  l=i.length;
+  
+  if(a>0 && a<l+1){
+	  ii=i[a-1];
+  }else{if(a==0){
+			ii=l;
+		}else{ii=0;}
+		}
+	
+  return ii;
+}
+
+var txts=document.getElementById("txt");
+
+x=0;
+	d=0;
+	e=0;
+	txts.innerHTML="";
+	e=eeppromX(0);
+	for(d=0;d<e;d++)txts.innerHTML+=eeppromX(d+1).toString()+"<br>";
+
+
+	</script>
+	</body>
+</html>
