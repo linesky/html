@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>
+float emulator
+		</title>
+		
+	</head>
+	<body bgColor='green'>
+		<div id="txt" bgColor="green" >
+			
+		</div>
+		<script>
+
+function floatEmulator(a,b,matfunc){ 
+  ii=0;
+  precs=1000;
+  if(matfunc==0)ii=a+b;
+  if(matfunc==1)ii=a-b;
+  if(matfunc==2)ii=a*b;
+  if(matfunc==3)ii=a/b;
+  if(matfunc==4)ii=a*precs;
+  if(matfunc==5)ii=a/precs;
+  return ii;
+}
+
+var txts=document.getElementById("txt");
+txts.innerHTML="-----<br>";
+	getInt=5;
+	setInt=4;
+	divs=3;
+	mult=2;
+	subs=1;
+	adds=0;
+	x=0;
+	xx=16;
+	xxx=0;
+	readss=0;
+
+x=0;
+
+
+	for(x=0;x<xx;x++){
+		xxx=floatEmulator(x,0,setInt);
+		xxx=floatEmulator(xxx,10,divs);
+		txts.innerHTML+=xxx.toString()+"<br>";
+	}
+
+
+
+	</script>
+	</body>
+</html>
