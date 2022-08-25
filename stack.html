@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>
+process stack
+		</title>
+		
+	</head>
+	<body bgColor='green'>
+		<div id="txt" bgColor="green" >
+			
+		</div>
+		<script>
+function stacks(value,pushPopRead){ 
+  ii=0;
+
+if(pushPopRead==0){
+	if(stackPoint<l){
+  		
+		i[stackPoint]=value;
+		stackPoint++;
+		ii=value;
+	}else{
+		ii=-1;
+	}
+}else{
+	if(pushPopRead==1){
+			if(stackPoint>0){
+				stackPoint--;
+			ii=i[stackPoint];
+	}else{
+		ii=-1;
+	}
+}else{
+	if(pushPopRead==2){
+		ii=i[stackPoint];
+	}
+}
+	
+}	
+  return ii;
+
+}
+l=512;
+var i=new Array (l+2);
+stackPoint=0;
+
+var txts=document.getElementById("txt");
+
+	d=0;
+	v=0;
+	pushs=0;
+	pops=1;
+	read=2;
+	sizes=255;
+	
+txts.innerHTML="";
+	for(d=0;d<sizes;d++)stacks(d,pushs);
+
+	for(d=0;d<sizes;d++){
+		v=stacks(d,pops);
+		if(v!=254-d)txts.innerHTML+="-----------error--<br>";
+		txts.innerHTML+=v.toString()+"<br>";
+		
+	}
+	</script>
+	</body>
+</html>
