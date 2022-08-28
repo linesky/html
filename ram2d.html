@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>
+add
+		</title>
+		
+	</head>
+	<body bgColor='green'>
+		<div id="txt" bgColor="green" >
+			
+		</div>
+		<script>
+function ram2d(x,y,writes,value){ 
+  ii=0;
+  l=xx*yy;
+  indexs=0;
+  indexs=x+(y*xx);
+  if(indexs>1 && indexs<l+2){
+	  if(writes!=0)i[indexs-2]=value;
+
+	  ii=i[indexs-2];
+  }else{if(indexs==0){
+			ii=xx;
+		}else{
+			if(indexs==1){
+			ii=yy;
+				
+			}
+		}}
+	
+	
+  return ii;
+}
+xx=8;
+yy=8;
+i=new Array(xx*yy+2);
+x=0;
+y=0;
+dx=0;
+dy=0;
+errs=0;
+
+var txts=document.getElementById("txt");
+txts.innerHTML=""
+	x=ram2d(0,0,0,0);
+	y=ram2d(0+1,0,0,0);
+		for(dy=0;dy<y;dy++){
+			for(dx=0;dx<x;dx++){
+				ram2d(dx+2,dy,1,dx+(dy*xx));
+			}
+		}
+ 
+		for(dy=0;dy<y;dy++){
+			for(dx=0;dx<x;dx++){
+				errs=ram2d(dx+2,dy,0,0);
+				if(errs!=dx+(dy*xx))txts.innerHTML+="---error<br>";
+				txts.innerHTML+="x "+dx.toString()+", y "+dy.toString()+"="+errs.toString()+"<br>";
+			}
+		}
+ 
+		</script>
+	</body>
+</html>
