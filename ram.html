@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>
+ram
+		</title>
+		
+	</head>
+	<body bgColor='green'>
+		<div id="txt" bgColor="green" >
+	
+		</div>
+		<script>
+
+function ram(a,writes,value){ 
+  ii=0;
+  if(a>0 && a<l+1){
+	  if(writes!=0)i[a-1]=value;
+	  ii=i[a-1];
+  }else{if(a==0){
+			ii=l;
+		}else{ii=0;}
+		}
+	
+	
+  return ii;
+}
+var txts=document.getElementById("txt");
+l=512;
+
+i=new Array(l+2);
+d=0;
+v=0;
+sizes=ram(0,0,0);
+txts.innerHTML="";
+	for(d=0;d<sizes;d++)ram(d+1,1,d);
+	for(d=0;d<sizes;d++){
+		v=ram(d+1,0,0);
+		if(v!=d)txts.innerHTML+="error--------------<br>";
+		txts.innerHTML+=d.toString()+" = "+v.toString()+"<br>";
+		
+	}
+	</script>
+	</body>
+</html>
