@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>
+add
+		</title>
+		
+	</head>
+	<body bgColor='green'>
+		<div id="txt" bgColor="green" >
+			
+		</div>
+		<script>
+function encodeX(a){ 
+  size=16;
+  ii=-1;
+  i=new Array(5,7,9,3,71,10,10,12,4,12,2,1,2,3,15,16);
+  if(a>-1 && a<size){
+	  ii=i[a];
+  }else{ii=-1;}
+  return ii;
+}
+var txts=document.getElementById("txt");
+txts.innerHTML=""
+	d=0;
+	e=0;
+	e=16;
+	for(d=0;d<e;d++)txts.innerHTML+=d.toString()+" = "+encodeX(d)+"<br>";
+
+		
+		
+		</script>
+	</body>
+</html>
