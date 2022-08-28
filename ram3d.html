@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>
+add
+		</title>
+		
+	</head>
+	<body bgColor='green'>
+		<div id="txt" bgColor="green" >
+			
+		</div>
+		<script>
+function ram3d(x,y,z,writes,value){ 
+  ii=0;
+  l=xx*yy*zz;
+  indexs=0;
+  indexs=x+(y*xx)+(xx*yy*z);
+  if(indexs>2 && indexs<l+3){
+	  if(writes!=0)i[indexs-3]=value;
+
+	  ii=i[indexs-3];
+  }else{if(indexs==0){
+			ii=xx;
+		}else{
+			if(indexs==1){
+			ii=yy;
+				
+			}else{if(indexs==2){
+					ii=zz;
+				
+			}
+			}
+		}}
+	
+	
+  return ii;
+}
+xx=8;
+yy=8;
+zz=8;
+i=new Array(xx*yy*zz+2);
+	x=0;
+	y=0;
+	z=0;
+	dx=0;
+	dy=0;
+	dz=0;
+	errs=0;
+	x=ram3d(0,0,0,0,0);
+	y=ram3d(0+1,0,0,0,0);
+	z=ram3d(0+2,0,0,0,0);
+	for(dz=0;dz<z;dz++){
+		for(dy=0;dy<y;dy++){
+			for(dx=0;dx<x;dx++){
+				ram3d(dx+3,dy,dz,1,dx+(dy*xx)+xx*yy*dz);
+			}
+		}
+	}
+var txts=document.getElementById("txt");
+txts.innerHTML=""
+	for(dz=0;dz<z;dz++){
+		for(dy=0;dy<y;dy++){
+			for(dx=0;dx<x;dx++){
+				errs=ram3d(dx+3,dy,dz,0,0);
+				if(errs!=dx+(dy*xx)+xx*yy*dz)txts.innerHTML+="---error<br>";
+				txts.innerHTML+="x "+dx.toString()+" ,y "+dy.toString()+" ,z "+dz.toString()+" = "+errs.toString()+"<br>";
+			}
+		}
+	}
+
+
+
+
+
+
+
+		
+		
+		</script>
+	</body>
+</html>
