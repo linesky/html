@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>
+add
+		</title>
+		
+	</head>
+	<body bgColor='green'>
+		<div id="txt" bgColor="green" >
+			
+		</div>
+		<script>
+function ram3value(a,writes,value,registers){ 
+  ii=0;
+  aa=a*rr+registers;
+  if(aa>0 && aa<l*rr+rr){
+	  if(writes!=0)i[aa-1]=value;
+	  ii=i[aa-1];
+  }else{if(aa==0){
+			ii=l;
+		}else{ii=0;}
+		}
+	
+	
+  return ii;
+}
+l=512
+rr=3
+i=new Array(l*rr+2);
+d=0;
+v=0;
+dd=0;
+var txts=document.getElementById("txt");
+txts.innerHTML="";
+sizes=ram3value(0,0,0,0);
+for(d=0;d<sizes;d++)for(dd=0;dd<3;dd++)ram3value(d+1,1,d*3+dd,dd);
+	for(d=0;d<sizes;d++){
+		for(dd=0;dd<3;dd++){
+			v=ram3value(d+1,0,0,dd);
+			if(v!=d*3+dd)txts.innerHTML+="error--------------<br>";
+			txts.innerHTML+="x "+d.toString()+" ,element "+dd.toString()+" = "+v.toString()+"<br>";
+		}
+	}
+
+
+			
+		</script>
+	</body>
+</html>
