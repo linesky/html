@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>
+add
+		</title>
+		
+	</head>
+	<body bgColor='green'>
+		<div id="txt" bgColor="green" >
+			
+		</div>
+		<script>
+function map2d(x,y){ 
+  ii=0;
+  l=0;
+  indexs=0;
+  xx=8;
+  yy=8;
+  // 0        1        2        3        4        5        6         7         
+  // 01234567 01234567 01234567 01234567 01234567 01234567 012345670 01234567
+  i="   ..  \n  .  . \n  .  . \n  .  . \n  .  . \n  .... \n  .  . \n  .  . \n";
+  l=i.length;
+  indexs=x+(y*xx);
+  if(indexs>1 && indexs<l+2){
+	  ii=i[indexs-2];
+  }else{if(indexs==0){
+			ii=xx;
+		}else{
+			if(indexs==1){
+			ii=yy;
+				
+			}
+		}}
+	
+	
+  return ii;
+}
+	x=0;
+	y=0;
+	dx=0;
+	dy=0;
+	x=map2d(0,0);
+	y=map2d(0+1,0);
+
+sss="";
+var txts=document.getElementById("txt");
+txts.innerHTML="";
+v=0;
+		for(dy=0;dy<y;dy++){
+			for(dx=0;dx<x;dx++){
+				v=map2d(dx+2,dy);
+				sss=sss+v.toString();
+			}
+			sss=sss+"<p>";
+		}
+
+ssss="";
+ssss=sss.replace("\n","<p>");
+txts.innerHTML+=sss+"<br>";
+
+		</script>
+	</body>
+</html>
