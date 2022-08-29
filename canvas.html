@@ -1,18 +1,22 @@
-<!DOCTYPE html>
+
 <html>
 <body>
 
-<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+<canvas id="canvas1" width="300" height="150" style="border:1px solid #d3d3d3;">
 Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-var c = document.getElementById("myCanvas");
+var c = document.getElementById("canvas1");
 var ctx = c.getContext("2d");
+var x=0;
+var y=0;
+for(y=0;y<150;y=y+150/10){
+	for(x=0;x<300;x=x+300/10){
 ctx.beginPath();
-ctx.rect(20, 20, 150, 100);
+ctx.rect(x, y, 300/12, 150/12);
 ctx.fillStyle = "green";
 ctx.fill();
-
+}}
 </script> 
 
 </body>
